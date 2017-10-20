@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    form(method='POST' action='/new-workout')
+        div.form-group
+            label(for='name') Name:
+            input#name.form-control(type='text', name='name')
+        button.btn.btn-primary(type='submit') Save

@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+
+
+
+    form(method='POST' action='/new-exercise')
+        select(name='id')
+            each workout in workouts
+                option(value=workout._id) #{workout.name}
+
+        div.form-group
+            label(for='exercise') Exercise:
+            input#exercise.form-control(type='text', name='exercise')
+        div.form-group
+            label(for='description') Description:
+            input#description.form-control(type='text', name='description')
+        div.form-group
+            label(for='set') Set:
+            input#set.form-control(type='number', name='set')
+        div.form-group
+            label(for='reps') Rep/time:
+            input#reps.form-control(type='text', name='reps')
+        button.btn.btn-primary(type='submit') Save

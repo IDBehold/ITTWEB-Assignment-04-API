@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(type='text/javascript', src='https://code.jquery.com/jquery-3.2.1.js')
+    script(type='text/javascript', src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    script(type='text/javascript', src='/js/delete-workout.js')
+  body
+    a(href='/' class="btn btn-default") Home
+    a(href='/new-exercise' class="btn btn-success") Creat new exercise
+    a(href='/new-workout' class="btn btn-success") Creat new workout
+    br
+    br
+    br
+    block content

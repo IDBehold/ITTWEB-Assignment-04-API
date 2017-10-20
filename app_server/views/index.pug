@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1= title
+
+  each workout in workouts
+    div
+      h3= workout.name
+      button(type='button' class="btn btn-danger glyphicon glyphicon-trash" onclick='deleteWorkout("'+ workout._id +'")')
+      div(class='table-responsive')
+        table(class='table')
+          thead
+            tr
+              td= 'Exercise'
+              td= 'Description'
+              td= 'Set'
+              td= 'Reps/time'
+          tbody
+            if typeof workout.exercises !== "undefined"
+                each exercise in workout.exercises
+                    tr
+                        td= exercise.exercise
+                        td= exercise.description
+                        td= exercise.set
+                        td= exercise.reps
+
+
